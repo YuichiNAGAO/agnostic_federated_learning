@@ -1,5 +1,5 @@
 
-import co@py
+import copy
 import numpy as np
 import torch
 from torch import nn
@@ -35,11 +35,16 @@ class LocalBase():
         self.args = args
         self.client_id = client_id
 
-        self.traindata=self.create_dataset(train_dataset,args.train_distributed_data[client_id])
-        self.testdata=self.create_dataset(test_dataset,args.train_distributed_data[client_id])
-
-    def create_dataset(self,dataset):
-
+        traindataloader=self.create_dataset(train_dataset,args.train_distributed_data[client_id])
+        testdataloader=self.create_dataset(test_dataset,args.test_distributed_data[client_id])
+        
+    def create_dataset(self,dataset,idx):
+        self.dataset_processed=CreateDataset(dataset,idx)
+        return DataLoader(
+                self.dataset_processed,
+                batch_size=self.args.batch_size,
+                shuffle=True
+            )
 
 class Fedavg_Local(LocalBase):
     def __init__(self,args,train_dataset,val_dataset,client_id):

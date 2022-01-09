@@ -43,7 +43,7 @@ def get_dataset(args):
 def data_distribution(dataset, n_clients):
     idx_map={}
     for client_id in range(n_clients):
-        idx=torch.where(dataset.targets == client_id)
+        idx=torch.where(dataset.targets == client_id)[0]
         idx_map[client_id]=idx
     print(idx_map)
     return idx_map

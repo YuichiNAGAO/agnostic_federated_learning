@@ -10,5 +10,6 @@ def get_args():
     parser.add_argument('--federated_type',type=str, default='fedavg',choices=['fedavg','afl'])
     parser.add_argument('--n_clients',type=int, default=3, help='the number of clients')
     parser.add_argument('--global_epochs',type=int, default=30, help='the number of global epochs')
+    parser.add_argument('--batch_size', type=int, default=32)
     args = parser.parse_args()
     return args

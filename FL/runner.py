@@ -1,6 +1,6 @@
 
-from nodes.client import *
-from nodes.master import *
+from .nodes.client import *
+from .nodes.master import *
 
 def runner_train(args, train_dataset, test_dataset,  epoch):
     clients={}
