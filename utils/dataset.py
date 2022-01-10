@@ -10,7 +10,7 @@ def get_dataset(args):
     each of those users.
     """
 
-    if args.dataset == 'cifar':
+    if args.dataset == 'cifar10':
         data_dir = '../dataset/'
         apply_transform = transforms.Compose(
             [transforms.ToTensor(),
@@ -29,11 +29,9 @@ def get_dataset(args):
             transforms.ToTensor(),
             transforms.Normalize((0.1307,), (0.3081,))])
 
-        train_dataset = datasets.MNIST(data_dir, train=True, download=True,
-                                       transform=apply_transform)
+        train_dataset = datasets.MNIST(data_dir, train=True, download=True, transform=apply_transform)
 
-        test_dataset = datasets.MNIST(data_dir, train=False, download=True,
-                                      transform=apply_transform)
+        test_dataset = datasets.MNIST(data_dir, train=False, download=True, transform=apply_transform)
 
     train_data_distribution = data_distribution(train_dataset, args.n_clients)
     test_data_distribution = data_distribution(test_dataset, args.n_clients)
@@ -43,6 +41,11 @@ def get_dataset(args):
 def data_distribution(dataset, n_clients):
     idx_map={}
     for client_id in range(n_clients):
-        idx=torch.where(dataset.targets == client_id)[0]
+        if type(dataset.targets) is list:
+            targets=torch.Tensor(dataset.targets)
+        else:
+            targets=dataset.targets
+        # pdb.set_trace()
+        idx=torch.where(targets == client_id)[0]
         idx_map[client_id]=idx
     return idx_map

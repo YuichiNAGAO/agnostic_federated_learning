@@ -23,6 +23,7 @@ def runner_train(args, train_dataset, test_dataset,  epoch):
         #distribute global weight to client and start local round(weight update etc...)
         client.localround(copied_global_weight,epoch)
         print(client_id)
-        
+    
+    master.aggregate(local_params)
     
     return

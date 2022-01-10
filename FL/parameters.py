@@ -21,7 +21,7 @@ def strtobool (val):
 
 def get_args():
     parser = argparse.ArgumentParser(description='Parameters for running training')
-    parser.add_argument('--dataset',type=str, default='mnist',choices=['mnist','cifar10'],help='dataset name')
+    parser.add_argument('--dataset',type=str, default='cifar10',choices=['mnist','cifar10'],help='dataset name')
     parser.add_argument('--federated_type',type=str, default='fedavg',choices=['fedavg','afl'])
     parser.add_argument('--model',type=str, default='cnn',choices=['cnn','mlp'])
     parser.add_argument('--n_clients',type=int, default=3, help='the number of clients')
@@ -30,5 +30,6 @@ def get_args():
     parser.add_argument('--batch_size', type=int, default=32)
     parser.add_argument("--on_cuda",  default="yes", type=strtobool)
     parser.add_argument("--optimizer", type=str, default="sgd", choices=['sgd','adam'])
+    parser.add_argument('--lr', type=float, default=0.01, help='learning rate')
     args = parser.parse_args()
     return args
