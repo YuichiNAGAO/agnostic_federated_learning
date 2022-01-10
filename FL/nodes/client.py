@@ -7,6 +7,10 @@ from torch.utils.data import DataLoader, Dataset
 
 import pdb
 
+import sys
+sys.path.append('../../')
+from utils.dataclass import ClientsParams
+
 
 # from utils.utils import define_classification_model, softmax
 # from utils.dataclass import ClientsParams
@@ -35,9 +39,11 @@ class LocalBase():
         self.args = args
         self.client_id = client_id
 
-        traindataloader=self.create_dataset(train_dataset,args.train_distributed_data[client_id])
-        testdataloader=self.create_dataset(test_dataset,args.test_distributed_data[client_id])
-        
+        self.traindataloader=self.create_dataset(train_dataset,args.train_distributed_data[client_id])
+        self.testdataloader=self.create_dataset(test_dataset,args.test_distributed_data[client_id])
+        self.device = 'cuda' if args.on_cuda else 'cpu'
+        self.criterion = nn.CrossEntropyLoss(reduction="mean")
+    
     def create_dataset(self,dataset,idx):
         self.dataset_processed=CreateDataset(dataset,idx)
         return DataLoader(

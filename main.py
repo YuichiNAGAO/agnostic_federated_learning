@@ -19,7 +19,7 @@ def main(args):
     
     # #training
     for epoch in tqdm(range(args.global_epochs)):
-        runner_train(args, train_dataset, test_dataset, epoch)
+        runner_train(args, train_dataset, test_dataset, epoch+1)
 
 if __name__ == '__main__':
     
