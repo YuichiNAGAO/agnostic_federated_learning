@@ -5,6 +5,7 @@ from .nodes.master import *
 
 def runner_train(args, train_dataset, test_dataset,  epoch):
     
+    local_params={}
     if epoch==1:
         global clients
         global master
@@ -21,9 +22,9 @@ def runner_train(args, train_dataset, test_dataset,  epoch):
 
 
         #distribute global weight to client and start local round(weight update etc...)
-        client.localround(copied_global_weight,epoch)
-        print(client_id)
-    
+        local_param=client.localround(copied_global_weight,epoch)
+        local_params[client_id]=local_param
+        
     master.aggregate(local_params)
     
     return

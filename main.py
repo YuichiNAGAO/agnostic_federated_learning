@@ -18,9 +18,9 @@ def main(args):
     train_dataset, test_dataset, args.train_distributed_data,  args.test_distributed_data= get_dataset(args)
     
     # #training
-    for epoch in tqdm(range(args.global_epochs)):
+    for epoch in range(args.global_epochs):
         runner_train(args, train_dataset, test_dataset, epoch+1)
-
+    
 if __name__ == '__main__':
     
     args = get_args()

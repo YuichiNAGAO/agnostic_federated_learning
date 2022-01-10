@@ -2,6 +2,9 @@
 import sys
 sys.path.append('../../')
 from utils.define_model import define_model
+from utils.utils import weighted_average_weights
+import pdb
+
 
 class GlobalBase():
     def __init__(self, args):
@@ -20,6 +23,13 @@ class Fedavg_Global(GlobalBase):
 
     def aggregate(self,local_params):
         print("aggregating weights...")
+        global_weight=self.model
+        local_weights=[]
+        for client_id ,dataclass in local_params.items():
+            local_weights.append(dataclass.weight)
+        w_avg=weighted_average_weights(local_weights,global_weight.state_dict())
+
+        pdb.set_trace()
 
 
 class Afl_Global(GlobalBase):
@@ -28,7 +38,7 @@ class Afl_Global(GlobalBase):
 
     def aggregate(self,local_params):
         print("aggregating weights...")
-
+        pdb.set_trace()
 
 
 def define_globalnode(args):

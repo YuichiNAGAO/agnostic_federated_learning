@@ -109,7 +109,8 @@ class LocalBase():
             train_acc,train_loss=100. * correct / len(self.traindataloader.dataset),sum(batch_loss)/len(batch_loss)
             print('| Global Round : {}/{} | Client id:{} | Local Epoch : {}/{} |  Train_Loss: {:.3f} | Train_Acc: {:.3f}'.format(
                         global_epoch,self.args.global_epochs, self.client_id, epoch,self.args.local_epochs,train_loss, train_acc))
-                
+        
+        return model.state_dict()      
         
 class Fedavg_Local(LocalBase):
     def __init__(self,args,train_dataset,val_dataset,client_id):
