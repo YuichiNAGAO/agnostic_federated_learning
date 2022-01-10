@@ -8,6 +8,10 @@ class GlobalBase():
         self.args = args
         self.device = 'cuda' if args.on_cuda else 'cpu'
         arch=define_model(args.model)
+        self.model=arch(args).to(self.device)
+    
+    def distribute_weight(self):
+        return self.model
 
 
 class Fedavg_Global(GlobalBase):

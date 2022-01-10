@@ -52,14 +52,69 @@ class LocalBase():
                 shuffle=True
             )
 
+    def update_weights(self,model,global_epoch):
+        model.train()
+        model.to(self.device)
+        
+        if self.args.optimizer == 'sgd':
+            optimizer = torch.optim.SGD(model.parameters(), lr=self.args.lr,momentum=0.9, weight_decay=5e-4)
+        elif self.args.optimizer == 'adam':
+            optimizer = torch.optim.Adam(model.parameters(), lr=self.args.lr, weight_decay=1e-4)
+        
+        for epoch in range(1,self.args.local_epochs+1):
+            
+            batch_loss = []
+            correct = 0
+
+            for batch_idx, (images, labels) in enumerate(self.traindataloader):
+                images, labels = images.to(self.device), labels.to(self.device)
+                if images.shape[1]==1:
+                    images=torch.cat((images, images, images), 1)
+
+                optimizer.zero_grad()
+                output = model(images)
+                pred = output.argmax(dim=1, keepdim=True)  
+                correct += pred.eq(labels.view_as(pred)).sum().item()
+                
+                loss = self.criterion(output, labels)
+                loss.backward()
+                #pdb.set_trace()
+
+                optimizer.step()
+                    
+                #self.logger.add_scalar('loss', loss.item())、あとでどっかに学習のログ
+                batch_loss.append(loss.item())
+
+            train_acc,train_loss=100. * correct / len(self.trainloader.dataset),sum(batch_loss)/len(batch_loss)
+            print('| Global Round : {}/{} | Client id:{} | Local Epoch : {}/{} |  Train_Loss: {:.3f} | Train_Acc: {:.3f}'.format(
+                        global_epoch,self.args.global_epochs, self.client_id, epoch,self.args.local_epochs,train_loss, train_acc))
+                
+        
 class Fedavg_Local(LocalBase):
     def __init__(self,args,train_dataset,val_dataset,client_id):
         super().__init__(args,train_dataset,val_dataset,client_id)
     
+    def localround(self,model,global_epoch):
+        
+        #update weights
+        self.updated_weight=self.update_weights(model,global_epoch)
+        
+        clients_params=ClientsParams(weight=self.updated_weight)
+        return clients_params
 
 class Afl_Local(LocalBase):
     def __init__(self,args,train_dataset,val_dataset,client_id):
         super().__init__(args,train_dataset,val_dataset,client_id)
+    
+    def localround(self,model,global_epoch):
+        #get first epoch loss
+        with torch.no_grad():
+            first_epoch_loss=self.cal_loss_afl(model)
+        #update weights
+        self.updated_weight=self.update_weights(model,global_epoch)
+        
+        clients_params=ClientsParams(weight=self.updated_weight,afl_loss=first_epoch_loss)
+        return clients_params
 
 
      

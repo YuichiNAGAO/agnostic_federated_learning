@@ -26,7 +26,9 @@ def get_args():
     parser.add_argument('--model',type=str, default='cnn',choices=['cnn','mlp'])
     parser.add_argument('--n_clients',type=int, default=3, help='the number of clients')
     parser.add_argument('--global_epochs',type=int, default=30, help='the number of global epochs')
+    parser.add_argument('--local_epochs',type=int, default=10, help='the number of local epochs')
     parser.add_argument('--batch_size', type=int, default=32)
     parser.add_argument("--on_cuda",  default="yes", type=strtobool)
+    parser.add_argument("--optimizer", type=str, default="sgd", choices=['sgd','adam'])
     args = parser.parse_args()
     return args
