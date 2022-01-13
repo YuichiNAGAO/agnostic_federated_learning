@@ -119,28 +119,25 @@ class Fedavg_Local(LocalBase):
     
     def localround(self,model,global_epoch):
         
-         #self.local_validate(model)
+        self.local_validate(model)
         #update weights
         self.updated_weight=self.update_weights(model,global_epoch)
         
         clients_params=ClientsParams(weight=self.updated_weight)
-        self.local_validate(model)
+        
         return clients_params
 
 class Afl_Local(LocalBase):
     def __init__(self,args,train_dataset,val_dataset,client_id):
         super().__init__(args,train_dataset,val_dataset,client_id)
-    
+        
     def localround(self,model,global_epoch):
 
-        self.local_validate(model)
-        #get first epoch loss
-        with torch.no_grad():
-            first_epoch_loss=self.cal_loss_afl(model)
+        _, test_loss=self.local_validate(model)
         #update weights
         self.updated_weight=self.update_weights(model,global_epoch)
         
-        clients_params=ClientsParams(weight=self.updated_weight,afl_loss=first_epoch_loss)
+        clients_params=ClientsParams(weight=self.updated_weight,afl_loss=test_loss)
         return clients_params
 
 
