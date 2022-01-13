@@ -38,7 +38,8 @@ class LocalBase():
     def  __init__(self,args,train_dataset,test_dataset,client_id):
         self.args = args
         self.client_id = client_id
-
+        self.train_dataset=train_dataset
+        self.test_dataset=test_dataset
         self.traindataloader=self.create_dataset(train_dataset,args.train_distributed_data[client_id])
         self.testdataloader=self.create_dataset(test_dataset,args.test_distributed_data[client_id])
         self.device = 'cuda' if args.on_cuda else 'cpu'
@@ -69,7 +70,7 @@ class LocalBase():
                 batch_loss.append(loss.item())
         test_acc=100. * correct / len(self.testdataloader.dataset)
         test_loss=sum(batch_loss)/len(batch_loss)
-        print('| Client id:{} | Test_Loss: {:.3f} | Test_Acc: {:.3f}'.format(self.client_id,self.args.local_epochs,test_loss, test_acc))
+        print('| Client id:{} | Test_Loss: {:.3f} | Test_Acc: {:.3f}'.format(self.client_id,test_loss, test_acc))
             
         return test_acc, test_loss
 
@@ -118,11 +119,12 @@ class Fedavg_Local(LocalBase):
     
     def localround(self,model,global_epoch):
         
-        self.local_validate(model)
+         #self.local_validate(model)
         #update weights
         self.updated_weight=self.update_weights(model,global_epoch)
         
         clients_params=ClientsParams(weight=self.updated_weight)
+        self.local_validate(model)
         return clients_params
 
 class Afl_Local(LocalBase):

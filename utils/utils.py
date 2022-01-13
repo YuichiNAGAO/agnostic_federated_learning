@@ -11,7 +11,6 @@ def weighted_average_weights(local_weights,global_weight,coff=None):
     w_avg = copy.deepcopy(global_weight)
     for key in w_avg.keys():
         for i in range(len(local_weights)):
-            #pdb.set_trace()
             if w_avg[key].dtype==torch.int64:
                 continue
             w_avg[key] += coff[i]*(local_weights[i][key]-global_weight[key])

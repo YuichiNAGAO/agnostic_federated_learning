@@ -29,7 +29,7 @@ class Fedavg_Global(GlobalBase):
             local_weights.append(dataclass.weight)
         w_avg=weighted_average_weights(local_weights,global_weight.state_dict())
 
-        pdb.set_trace()
+        self.model.load_state_dict(w_avg)
 
 
 class Afl_Global(GlobalBase):
