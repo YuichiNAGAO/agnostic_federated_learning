@@ -4,11 +4,10 @@ Agnostic Federated Learning(2020 NIPS)の再現実装
 https://arxiv.org/pdf/1902.00146.pdf
 
 
-How to run
+### How to run
 ```
 python main.py 
 ```
-
 options:
 ```
   --dataset {mnist,cifar10}          
@@ -23,4 +22,19 @@ options:
   --lr float
   --iid {yes,no}
   --drfa_gamma float
+```
+
+
+### Docker setup
+
+Required host copmputer environment
+```
+- OS: Ubuntu20.04
+- CUDA 11.2
+```
+
+Docer setup
+```
+docker build -t agnostic_federated_learning .
+docker run -it -v <host dir>:/app --gpus all agnostic_federated_learning
 ```
