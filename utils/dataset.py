@@ -1,5 +1,6 @@
 
 import copy
+import os 
 import torch
 from torchvision import datasets, transforms
 import pdb
@@ -12,7 +13,7 @@ def get_dataset(args):
     """
 
     if args.dataset == 'cifar10':
-        data_dir = '../dataset/'
+        data_dir = os.path.join(args.path,'dataset/')
         apply_transform = transforms.Compose(
             [transforms.ToTensor(),
              transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
@@ -24,7 +25,7 @@ def get_dataset(args):
                                       transform=apply_transform)
 
     elif args.dataset == 'mnist':
-        data_dir = '../dataset/'
+        data_dir = os.path.join(args.path,'dataset/')
 
         apply_transform = transforms.Compose([
             transforms.ToTensor(),

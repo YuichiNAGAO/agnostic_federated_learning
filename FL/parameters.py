@@ -31,10 +31,10 @@ def get_args():
     parser.add_argument("--on_cuda",  default="yes", type=strtobool)
     parser.add_argument("--optimizer", type=str, default="sgd", choices=['sgd','adam'])
     parser.add_argument('--lr', type=float, default=0.01, help='learning rate')
-    parser.add_argument("--iid", default="yes", type=strtobool)
+    parser.add_argument("--iid", default="no", type=strtobool)
 
     # For AFL
     parser.add_argument('--drfa_gamma', default=0.05, type=float)
-    
+
     args = parser.parse_args()
     return args

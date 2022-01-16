@@ -6,6 +6,7 @@ import time
 import random
 from tqdm import tqdm
 import pdb
+import os 
 
 from utils.dataset import get_dataset
 from FL.runner import runner_train
@@ -24,4 +25,6 @@ def main(args):
 if __name__ == '__main__':
     
     args = get_args()
+    args.path = os.getcwd()
+    pdb.set_trace()
     main(args)
