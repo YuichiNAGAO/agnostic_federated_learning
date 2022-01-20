@@ -38,20 +38,25 @@ class LocalBase():
     def  __init__(self,args,train_dataset,test_dataset,client_id):
         self.args = args
         self.client_id = client_id
-        self.train_dataset=train_dataset
-        self.test_dataset=test_dataset
-        self.traindataloader=self.create_dataset(train_dataset,args.train_distributed_data[client_id])
-        self.testdataloader=self.create_dataset(test_dataset,args.test_distributed_data[client_id])
+        self.trainDataset=CreateDataset(train_dataset, args.train_distributed_data[client_id])
+        self.testDataset=CreateDataset(test_dataset, args.test_distributed_data[client_id])
+        self.traindataloader=DataLoader(self.trainDataset, args.batch_size, shuffle=True)
+        self.testdataloader=DataLoader(self.testDataset, args.batch_size, shuffle=True)
         self.device = 'cuda' if args.on_cuda else 'cpu'
         self.criterion = nn.CrossEntropyLoss(reduction="mean")
+
+        self.show_class_distribution(self.trainDataset,self.testDataset)
     
-    def create_dataset(self,dataset,idx):
-        self.dataset_processed=CreateDataset(dataset,idx)
-        return DataLoader(
-                self.dataset_processed,
-                batch_size=self.args.batch_size,
-                shuffle=True
-            )
+    def show_class_distribution(self,train,test):
+        print("Class distribution of id:{}".format(self.client_id))
+        class_distribution_train=[ 0 for _ in range(10)]
+        class_distribution_test=[ 0 for _ in range(10)]
+        for _, c in train:
+            class_distribution_train[c]+=1
+        for _, c in test:
+            class_distribution_test[c]+=1
+        print("train",class_distribution_train)
+        print("test",class_distribution_test)
 
     def local_validate(self,model):
         model.eval()

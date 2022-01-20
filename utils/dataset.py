@@ -55,14 +55,16 @@ def get_dataset(args):
 def data_distribution(dataset, args):
     idx_map={}
     n_clients=args.n_clients
-    if args.iid:
+    if args.iid=="iid":
+        print("iid")
         num_items = int(len(dataset)/n_clients)
         all_idxs = [i for i in range(len(dataset))]
         for i in range(n_clients):
             idx_map[i] = set(np.random.choice(all_idxs, num_items,replace=False))
             all_idxs = list(set(all_idxs) - idx_map[i])
         
-    else: 
+    elif args.iid=="one":
+        print("one")
         for client_id in range(n_clients):
             if type(dataset.targets) is list:
                 targets=torch.Tensor(dataset.targets)
@@ -70,5 +72,78 @@ def data_distribution(dataset, args):
                 targets=dataset.targets
             # pdb.set_trace()
             idx=torch.where(targets == client_id)[0]
-            idx_map[client_id]=idx
+            idx=[int(i) for i in idx]
+            idx_map[client_id]=set(idx)
+
+    elif args.iid=="noniid":
+        print("noniid")
+        idx_map=noniid(dataset,n_clients)
+
+    else:
+        NotImplementedError
+
     return idx_map
+        
+
+def noniid(dataset, num_users):
+    """
+    Sample non-I.I.D client data from MNIST dataset
+    :param dataset:
+    :param num_users:
+    :return:
+    """
+    # 60,000 training imgs -->  200 imgs/shard X 300 shards
+    
+    num_class=2
+    num_shards=num_users*2
+    num_imgs=len(dataset)//num_shards
+    idx_shard = [i for i in range(num_shards)]
+    dict_users = {i: np.array([]) for i in range(num_users)}
+    idxs = np.arange(num_shards*num_imgs)
+    labels = np.array(dataset.targets)
+    
+
+    # sort labels
+    idxs_labels = np.vstack((idxs, labels))
+    idxs_labels = idxs_labels[:, idxs_labels[1, :].argsort()]
+    idxs = idxs_labels[0, :]
+    # divide and assign 2 shards/client
+    for i in range(num_users):
+        rand_set = set(np.random.choice(idx_shard, num_class, replace=False))
+        idx_shard = list(set(idx_shard) - rand_set)
+        for rand in rand_set:
+            dict_users[i] = np.concatenate(
+                (dict_users[i], idxs[rand*num_imgs:(rand+1)*num_imgs]), axis=0)
+    # pdb.set_trace()
+    return dict_users
+
+def unbalance(dataset, num_users):
+    """
+    Sample non-I.I.D client data from MNIST dataset
+    :param dataset:
+    :param num_users:
+    :return:
+    """
+    # 60,000 training imgs -->  200 imgs/shard X 300 shards
+    
+    num_class=2
+    num_shards=num_users*2
+    num_imgs=len(dataset)//num_shards
+    idx_shard = [i for i in range(num_shards)]
+    dict_users = {i: np.array([]) for i in range(num_users)}
+    idxs = np.arange(num_shards*num_imgs)
+    labels = dataset.dataset.train_labels[dataset.indices].numpy()
+    # sort labels
+    idxs_labels = np.vstack((idxs, labels))
+    idxs_labels = idxs_labels[:, idxs_labels[1, :].argsort()]
+    idxs = idxs_labels[0, :]
+
+    # divide and assign 2 shards/client
+    for i in range(num_users):
+        rand_set = set(np.random.choice(idx_shard, num_class, replace=False))
+        idx_shard = list(set(idx_shard) - rand_set)
+        for rand in rand_set:
+            dict_users[i] = np.concatenate(
+                (dict_users[i], idxs[rand*num_imgs:(rand+1)*num_imgs]), axis=0)
+    # pdb.set_trace()
+    return dict_users
