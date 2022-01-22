@@ -1,6 +1,7 @@
 import copy
 import torch
 import numpy as np
+import pdb
 
 def weighted_average_weights(local_weights,global_weight,coff=None):
     """
@@ -38,3 +39,4 @@ def euclidean_proj_simplex(v, s=1):
     # compute the projection by thresholding v using theta
     w = (v - theta).clamp(min=0)
     return w  
+

@@ -78,6 +78,9 @@ def data_distribution(dataset, args):
     elif args.iid=="noniid":
         print("noniid")
         idx_map=noniid(dataset,n_clients)
+    
+    elif args.iid=="from_csv":
+        idx_map=from_csv(dataset,n_clients,args)
 
     else:
         NotImplementedError
@@ -117,7 +120,7 @@ def noniid(dataset, num_users):
     # pdb.set_trace()
     return dict_users
 
-def unbalance(dataset, num_users):
+def from_csv(dataset, num_users, args):
     """
     Sample non-I.I.D client data from MNIST dataset
     :param dataset:
@@ -125,7 +128,6 @@ def unbalance(dataset, num_users):
     :return:
     """
     # 60,000 training imgs -->  200 imgs/shard X 300 shards
-    
     num_class=2
     num_shards=num_users*2
     num_imgs=len(dataset)//num_shards
@@ -147,3 +149,9 @@ def unbalance(dataset, num_users):
                 (dict_users[i], idxs[rand*num_imgs:(rand+1)*num_imgs]), axis=0)
     # pdb.set_trace()
     return dict_users
+
+
+def read_config(pth):
+    print(pth)
+    config=np.loadtxt(pth,delimiter=',')
+    return config
