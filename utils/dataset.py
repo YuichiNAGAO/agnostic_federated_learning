@@ -127,27 +127,6 @@ def from_csv(dataset, num_users, args):
     :param num_users:
     :return:
     """
-    # 60,000 training imgs -->  200 imgs/shard X 300 shards
-    num_class=2
-    num_shards=num_users*2
-    num_imgs=len(dataset)//num_shards
-    idx_shard = [i for i in range(num_shards)]
-    dict_users = {i: np.array([]) for i in range(num_users)}
-    idxs = np.arange(num_shards*num_imgs)
-    labels = dataset.dataset.train_labels[dataset.indices].numpy()
-    # sort labels
-    idxs_labels = np.vstack((idxs, labels))
-    idxs_labels = idxs_labels[:, idxs_labels[1, :].argsort()]
-    idxs = idxs_labels[0, :]
-
-    # divide and assign 2 shards/client
-    for i in range(num_users):
-        rand_set = set(np.random.choice(idx_shard, num_class, replace=False))
-        idx_shard = list(set(idx_shard) - rand_set)
-        for rand in rand_set:
-            dict_users[i] = np.concatenate(
-                (dict_users[i], idxs[rand*num_imgs:(rand+1)*num_imgs]), axis=0)
-    # pdb.set_trace()
     return dict_users
 
 
