@@ -121,12 +121,10 @@ def noniid(dataset, num_users):
     return dict_users
 
 def from_csv(dataset, num_users, args):
-    """
-    Sample non-I.I.D client data from MNIST dataset
-    :param dataset:
-    :param num_users:
-    :return:
-    """
+    csv_dir = os.path.join(args.path,'config',args.from_csv+'.csv')
+    print(np.loadtxt(csv_dir, delimiter=','))
+
+    print(csv_dir)
     return dict_users
 
 
