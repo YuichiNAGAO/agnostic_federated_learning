@@ -26,6 +26,8 @@ def main(args):
 if __name__ == '__main__':
     
     args = get_args()
+    for key , value in args._get_kwargs():
+        print(f"{key}: {value}")
     args.path = os.getcwd()
 
     if args.seed:
