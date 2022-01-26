@@ -53,14 +53,9 @@ def get_dataset(args):
     return train_dataset, test_dataset, train_data_distribution, test_data_distribution
 
 def data_distribution(dataset, args):
-    idx_map={}
-    n_clients=args.n_clients
+    
     if args.data_dist=="iid":
-        num_items = int(len(dataset)/n_clients)
-        all_idxs = [i for i in range(len(dataset))]
-        for i in range(n_clients):
-            idx_map[i] = set(np.random.choice(all_idxs, num_items,replace=False))
-            all_idxs = list(set(all_idxs) - idx_map[i])
+        idx_map=iid(dataset, args)
     
     elif args.data_dist=="from_csv":
         idx_map=from_csv(dataset,args)
@@ -69,6 +64,16 @@ def data_distribution(dataset, args):
         NotImplementedError
 
     return idx_map
+
+def iid(dataset, args):
+    idx_map={}
+    n_clients=args.n_clients
+    num_items = int(len(dataset)/n_clients)
+    all_idxs = [i for i in range(len(dataset))]
+    for i in range(n_clients):
+        idx_map[i] = set(np.random.choice(all_idxs, num_items,replace=False))
+        all_idxs = list(set(all_idxs) - idx_map[i])
+
 
 def from_csv(dataset, args):
     csv_dir = os.path.join(args.path,'config',args.from_csv+'.csv')
