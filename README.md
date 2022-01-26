@@ -1,4 +1,4 @@
-# agnostic_federated_learning
+# Agnostic Federated Learning
 
 Agnostic Federated Learning(2020 NIPS)の再現実装
 https://arxiv.org/pdf/1902.00146.pdf
@@ -60,7 +60,12 @@ python main.py --dataset mnist --federated_type afl --data_dist iid
 ```
 
 ##### fashionmnist
-
+```
+# FedAvg
+python main.py --dataset fmnist --federated_type fedavg --data_dist iid
+# AFL
+python main.py --dataset fmnist --federated_type afl --data_dist iid
+```
 
 #### From CSV
 ##### cifar10
@@ -78,3 +83,9 @@ python main.py --dataset mnist --federated_type fedavg --data_dist from_csv --fr
 python main.py --dataset mnist --federated_type afl --data_dist from_csv --from_csv sample2
 ```
 ##### fashionmnist
+```
+# FedAvg
+python main.py --dataset fmnist --federated_type fedavg --data_dist from_csv --from_csv sample2
+# AFL
+python main.py --dataset fmnist --federated_type afl --data_dist from_csv --from_csv sample2
+```

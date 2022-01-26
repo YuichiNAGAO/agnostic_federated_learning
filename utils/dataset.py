@@ -56,7 +56,6 @@ def data_distribution(dataset, args):
     idx_map={}
     n_clients=args.n_clients
     if args.data_dist=="iid":
-        print("iid")
         num_items = int(len(dataset)/n_clients)
         all_idxs = [i for i in range(len(dataset))]
         for i in range(n_clients):
@@ -64,7 +63,6 @@ def data_distribution(dataset, args):
             all_idxs = list(set(all_idxs) - idx_map[i])
         
     elif args.data_dist=="one":
-        print("one")
         for client_id in range(n_clients):
             if type(dataset.targets) is list:
                 targets=torch.Tensor(dataset.targets)
@@ -76,7 +74,6 @@ def data_distribution(dataset, args):
             idx_map[client_id]=set(idx)
 
     elif args.data_dist=="noniid":
-        print("noniid")
         idx_map=noniid(dataset,n_clients)
     
     elif args.data_dist=="from_csv":
@@ -142,6 +139,5 @@ def from_csv(dataset, args):
     return dict_users
 
 def read_config(pth):
-    print(pth)
     config=np.loadtxt(pth,delimiter=',')
     return config
