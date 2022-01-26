@@ -1,4 +1,4 @@
-name: AFL fmnist Non-iid
+name: FedAvg fmnist Non-iid
 on: workflow_dispatch
 
 jobs:
@@ -9,4 +9,4 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Run experiment
-        run:  python main.py --federated_type afl --dataset fmnist --data_dist from_csv --from_csv sample2
+        run:  python main.py --federated_type fedavg --dataset fmnist --data_dist from_csv --from_csv sample2
