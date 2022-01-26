@@ -1,8 +1,8 @@
 
 import sys
 sys.path.append('../../')
-from utils.define_model import define_model
-from utils.utils import weighted_average_weights, euclidean_proj_simplex
+from FL.utils.define_model import define_model
+from FL.utils.utils import weighted_average_weights, euclidean_proj_simplex
 import pdb
 import torch
 

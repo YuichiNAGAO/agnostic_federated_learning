@@ -9,11 +9,11 @@ import pdb
 
 import sys
 sys.path.append('../../')
-from utils.dataclass import ClientsParams
+from FL.utils.dataclass import ClientsParams
 
 
-# from utils.utils import define_classification_model, softmax
-# from utils.dataclass import ClientsParams
+# from FL.utils.utils import define_classification_model, softmax
+# from FL.utils.dataclass import ClientsParams
 
 
 

@@ -8,8 +8,8 @@ from tqdm import tqdm
 import pdb
 import os 
 
-from utils.dataset import get_dataset
-from utils.utils import set_global_seeds
+from FL.utils.dataset import get_dataset
+from FL.utils.utils import set_global_seeds
 from FL.runner import runner_train
 from FL.parameters import get_args
 
