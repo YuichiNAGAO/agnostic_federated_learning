@@ -38,3 +38,17 @@ Docer setup
 docker build -t agnostic_federated_learning .
 docker run -it -v <host dir>:/app --gpus all agnostic_federated_learning
 ```
+
+
+### Run experiment
+
+#### IID
+```
+python main.py --dataset cifar10 --federated_type fedavg --data_dist iid
+```
+
+
+#### From CSV
+```
+python main.py --dataset cifar10 --federated_type fedavg --data_dist from_csv --from_csv sample2
+```
