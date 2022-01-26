@@ -31,7 +31,7 @@ class CreateDataset(Dataset):
 
     def __getitem__(self, item):
         image, label = self.dataset[self.idxs[item]]
-        return torch.tensor(image), torch.tensor(label)
+        return image, torch.tensor(label)
 
 
 class LocalBase():
