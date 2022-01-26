@@ -26,5 +26,12 @@ def runner_train(args, train_dataset, test_dataset,  epoch):
         local_params[client_id]=local_param
         
     master.aggregate(local_params)
-    
+
+    if epoch==args.global_epochs:
+        for client_id, client in clients.items():
+            global_weight=master.distribute_weight()
+            copied_global_weight=copy.deepcopy(global_weight)
+            print("/nFinal Results")
+            local_param=client.localround(copied_global_weight,epoch,validation_only=True)
+
     return
