@@ -11,7 +11,7 @@ def get_dataset(args):
     the keys are the user index and the values are the corresponding data for
     each of those users.
     """
-    data_dir = os.path.join(args.path,'dataset/')
+    data_dir = os.path.join(args.root_path,'dataset/')
     if args.dataset == 'cifar10':
         
         apply_transform = transforms.Compose(
@@ -43,7 +43,6 @@ def get_dataset(args):
 
         test_dataset = datasets.FashionMNIST(data_dir, train=False, download=True, transform=apply_transform)
 
-
     else:
         NotImplementedError
     
@@ -74,9 +73,8 @@ def iid(dataset, args):
         idx_map[i] = set(np.random.choice(all_idxs, num_items,replace=False))
         all_idxs = list(set(all_idxs) - idx_map[i])
 
-
 def from_csv(dataset, args):
-    csv_dir = os.path.join(args.path,'config',args.from_csv+'.csv')
+    csv_dir = os.path.join(args.root_path,'config',args.from_csv+'.csv')
     dist_config=np.loadtxt(csv_dir, delimiter=',')
     dict_users = {i: np.array([]) for i in range(len(dist_config))}
     if type(dataset.targets) is list:

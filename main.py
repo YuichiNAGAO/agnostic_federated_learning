@@ -29,7 +29,7 @@ if __name__ == '__main__':
     device_check(args.on_cuda)
     for key , value in args._get_kwargs():
         print(f"{key}: {value}")
-    args.path = os.getcwd()
+    args.root_path = os.getcwd()
 
     if args.seed:
         set_global_seeds(args.seed_num)
