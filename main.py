@@ -9,6 +9,7 @@ import pdb
 import os 
 
 from utils.dataset import get_dataset
+from utils.utils import set_global_seeds
 from FL.runner import runner_train
 from FL.parameters import get_args
 
@@ -26,4 +27,8 @@ if __name__ == '__main__':
     
     args = get_args()
     args.path = os.getcwd()
+
+    if args.seed:
+        set_global_seeds(args.seed_num)
+
     main(args)

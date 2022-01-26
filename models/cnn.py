@@ -31,7 +31,7 @@ class Net(nn.Module):
 def cnn(args):
     dataset = args.dataset
 
-    if "cifar" in dataset or  dataset == "mnist":
+    if "cifar" in dataset or dataset == "mnist" or dataset == "fmnist":
         return Net()
     else:
         raise NotImplementedError(f"not supported yet.")

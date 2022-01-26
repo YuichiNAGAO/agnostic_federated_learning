@@ -25,7 +25,7 @@ class MLP(nn.Module):
 def mlp(args):
     dataset = args.dataset
 
-    if "cifar" in dataset or  dataset == "mnist":
+    if "cifar" in dataset or  dataset == "mnist" or dataset == "fmnist":
         return MLP()
     else:
         raise NotImplementedError(f"not supported yet.")

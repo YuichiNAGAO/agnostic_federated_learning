@@ -33,6 +33,8 @@ def get_args():
     parser.add_argument('--lr', type=float, default=0.01, help='learning rate')
     parser.add_argument("--data_dist", type=str, default='iid',choices=['iid','noniid','one','from_csv'],help='local data distribution')
     parser.add_argument("--from_csv", type=str,  default='sample1')
+    parser.add_argument("--seed", default="yes", type=strtobool)
+    parser.add_argument("--seed_num", default=0, type=int)
     # For AFL
     parser.add_argument('--drfa_gamma', default=0.05, type=float)
 
