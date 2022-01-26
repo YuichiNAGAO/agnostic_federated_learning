@@ -1,4 +1,4 @@
-name: FedAvg mnist iid
+name: fmnist iid FedAvg
 on: workflow_dispatch
 
 jobs:
@@ -9,4 +9,4 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Run experiment
-        run:  python main.py --federated_type fedavg --dataset mnist --data_dist iid
+        run:  python main.py --dataset fmnist --data_dist iid --federated_type fedavg
