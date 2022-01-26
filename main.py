@@ -9,7 +9,7 @@ import pdb
 import os 
 
 from FL.utils.dataset import get_dataset
-from FL.utils.utils import set_global_seeds
+from FL.utils.utils import set_global_seeds, device_check
 from FL.runner import runner_train
 from FL.parameters import get_args
 
@@ -26,6 +26,7 @@ def main(args):
 if __name__ == '__main__':
     
     args = get_args()
+    device_check(args.on_cuda)
     for key , value in args._get_kwargs():
         print(f"{key}: {value}")
     args.path = os.getcwd()

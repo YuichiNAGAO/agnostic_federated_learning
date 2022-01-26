@@ -138,9 +138,11 @@ class Afl_Local(LocalBase):
     def __init__(self,args,train_dataset,val_dataset,client_id):
         super().__init__(args,train_dataset,val_dataset,client_id)
         
-    def localround(self,model,global_epoch):
+    def localround(self,model,global_epoch,validation_only=False):
 
         _, test_loss=self.local_validate(model)
+        if validation_only:
+            return 
         #update weights
         self.updated_weight=self.update_weights(model,global_epoch)
         

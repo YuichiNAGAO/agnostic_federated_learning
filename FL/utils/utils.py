@@ -52,3 +52,12 @@ def set_global_seeds(seed_number):
     np.random.seed(seed_number)
     torch.manual_seed(seed_number)
 
+def device_check(on_cuda):
+    if torch.cuda.is_available():
+        print("GPU will be used for training\n")
+    else:
+        if on_cuda:
+            message = "GPU is not available"
+            raise ValueError(message)
+        message = "Warning!: CPU will be used for training\n"
+        print(message, flush=True)
