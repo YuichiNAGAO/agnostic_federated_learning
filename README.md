@@ -47,45 +47,45 @@ docker run -it -v <host dir>:/app --gpus all agnostic_federated_learning
 ##### cifar10
 ```
 # FedAvg
-python main.py --dataset cifar10 --federated_type fedavg --data_dist iid
+python main.p --federated_type fedavgy --dataset cifar10 --data_dist iid
 # AFL
-python main.py --dataset cifar10 --federated_type afl --data_dist iid
+python main.py --federated_type afl --dataset cifar10 --data_dist iid
 ```
 ##### mnist
 ```
 # FedAvg
-python main.py --dataset mnist --federated_type fedavg --data_dist iid
+python main.py --federated_type fedavg --dataset mnist --data_dist iid
 # AFL
-python main.py --dataset mnist --federated_type afl --data_dist iid
+python main.py --federated_type afl --dataset mnist --data_dist iid
 ```
 
 ##### fashionmnist
 ```
 # FedAvg
-python main.py --dataset fmnist --federated_type fedavg --data_dist iid
+python main.py --federated_type fedavg --dataset fmnist --data_dist iid
 # AFL
-python main.py --dataset fmnist --federated_type afl --data_dist iid
+python main.py --federated_type afl --dataset fmnist --data_dist iid
 ```
 
 #### From CSV
 ##### cifar10
 ```
 # FedAvg
-python main.py --dataset cifar10 --federated_type fedavg --data_dist from_csv --from_csv sample2
+python main.py --federated_type fedavg --dataset cifar10 --data_dist from_csv --from_csv sample2
 # AFL
-python main.py --dataset cifar10 --federated_type afl --data_dist from_csv --from_csv sample2
+python main.py --federated_type afl --dataset cifar10 --data_dist from_csv --from_csv sample2
 ```
 ##### mnist
 ```
 # FedAvg
-python main.py --dataset mnist --federated_type fedavg --data_dist from_csv --from_csv sample2
+python main.py --federated_type fedavg --dataset mnist --data_dist from_csv --from_csv sample2
 # AFL
-python main.py --dataset mnist --federated_type afl --data_dist from_csv --from_csv sample2
+python main.py --federated_type afl --dataset mnist --data_dist from_csv --from_csv sample2
 ```
 ##### fashionmnist
 ```
 # FedAvg
-python main.py --dataset fmnist --federated_type fedavg --data_dist from_csv --from_csv sample2
+python main.py --federated_type fedavg --dataset fmnist --data_dist from_csv --from_csv sample2
 # AFL
-python main.py --dataset fmnist --federated_type afl --data_dist from_csv --from_csv sample2
+python main.py --federated_type afl --dataset fmnist --data_dist from_csv --from_csv sample2
 ```
