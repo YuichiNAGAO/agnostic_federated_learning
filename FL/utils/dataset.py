@@ -85,11 +85,12 @@ def iid(dataset, args):
     for i in range(n_clients):
         idx_map[i] = set(np.random.choice(all_idxs, num_items,replace=False))
         all_idxs = list(set(all_idxs) - idx_map[i])
+    return idx_map
 
 def from_csv(dataset, args):
     csv_dir = os.path.join(args.root_path,'config',args.from_csv+'.csv')
     dist_config=np.loadtxt(csv_dir, delimiter=',')
-    dict_users = {i: np.array([]) for i in range(len(dist_config))}
+    idx_map = {i: np.array([]) for i in range(len(dist_config))}
     if type(dataset.targets) is list:
         targets=torch.Tensor(dataset.targets)
     else:
@@ -100,12 +101,12 @@ def from_csv(dataset, args):
         ratio_list=dist/np.sum(dist)
         for i, ratio in enumerate(ratio_list):
             if i==len(ratio_list)-1:
-                dict_users[i] = np.concatenate((dict_users[i], idx), axis=0)
+                idx_map[i] = np.concatenate((idx_map[i], idx), axis=0)
                 break
             rand_set=np.random.choice(idx, size=int(l*ratio), replace=False)
             idx = np.setdiff1d(idx, rand_set)
-            dict_users[i] = np.concatenate((dict_users[i], rand_set), axis=0)
-    return dict_users
+            idx_map[i] = np.concatenate((idx_map[i], rand_set), axis=0)
+    return idx_map
 
 def read_config(pth):
     config=np.loadtxt(pth,delimiter=',')
