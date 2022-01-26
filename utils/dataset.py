@@ -80,7 +80,7 @@ def data_distribution(dataset, args):
         idx_map=noniid(dataset,n_clients)
     
     elif args.iid=="from_csv":
-        idx_map=from_csv(dataset,n_clients,args)
+        idx_map=from_csv(dataset,args)
 
     else:
         NotImplementedError
@@ -88,10 +88,10 @@ def data_distribution(dataset, args):
     return idx_map
         
 
-def noniid(dataset, num_users):
+def noniid(dataset, num_users): 
     """
     Sample non-I.I.D client data from MNIST dataset
-    :param dataset:
+    :param dataset:vg
     :param num_users:
     :return:
     """
@@ -120,13 +120,26 @@ def noniid(dataset, num_users):
     # pdb.set_trace()
     return dict_users
 
-def from_csv(dataset, num_users, args):
+def from_csv(dataset, args):
     csv_dir = os.path.join(args.path,'config',args.from_csv+'.csv')
-    print(np.loadtxt(csv_dir, delimiter=','))
-
-    print(csv_dir)
+    dist_config=np.loadtxt(csv_dir, delimiter=',')
+    dict_users = {i: np.array([]) for i in range(len(dist_config))}
+    if type(dataset.targets) is list:
+        targets=torch.Tensor(dataset.targets)
+    else:
+        targets=dataset.targets
+    for cls, dist in enumerate(dist_config.T):
+        idx=torch.where(targets == cls )[0].numpy()
+        l=len(idx)
+        ratio_list=dist/np.sum(dist)
+        for i, ratio in enumerate(ratio_list):
+            if i==len(ratio_list)-1:
+                dict_users[i] = np.concatenate((dict_users[i], idx), axis=0)
+                break
+            rand_set=np.random.choice(idx, size=int(l*ratio), replace=False)
+            idx = np.setdiff1d(idx, rand_set)
+            dict_users[i] = np.concatenate((dict_users[i], rand_set), axis=0)
     return dict_users
-
 
 def read_config(pth):
     print(pth)
