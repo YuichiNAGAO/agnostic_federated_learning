@@ -1,0 +1,611 @@
+Files already downloaded and verified
+Files already downloaded and verified
+Class distribution of id:0
+train [5000, 5000, 5000, 1666, 0, 0, 0, 0, 0, 0]
+test [1000, 1000, 1000, 333, 0, 0, 0, 0, 0, 0]
+Class distribution of id:1
+train [0, 0, 0, 1666, 2500, 2500, 2500, 2500, 2500, 2500]
+test [0, 0, 0, 333, 500, 500, 500, 500, 500, 500]
+Class distribution of id:2
+train [0, 0, 0, 1668, 2500, 2500, 2500, 2500, 2500, 2500]
+test [0, 0, 0, 334, 500, 500, 500, 500, 500, 500]
+| Client id:0 | Test_Loss: 2.281 | Test_Acc: 29.613
+| Global Round : 1/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 1.041 | Train_Acc: 57.602
+| Global Round : 1/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.682 | Train_Acc: 72.675
+| Global Round : 1/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.577 | Train_Acc: 77.091
+| Global Round : 1/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.511 | Train_Acc: 80.169
+| Global Round : 1/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.452 | Train_Acc: 82.323
+| Client id:1 | Test_Loss: 2.315 | Test_Acc: 0.360
+| Global Round : 1/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 1.668 | Train_Acc: 33.877
+| Global Round : 1/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 1.262 | Train_Acc: 52.640
+| Global Round : 1/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 1.082 | Train_Acc: 60.110
+| Global Round : 1/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.964 | Train_Acc: 64.137
+| Global Round : 1/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.874 | Train_Acc: 68.187
+| Client id:2 | Test_Loss: 2.316 | Test_Acc: 0.270
+| Global Round : 1/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 1.653 | Train_Acc: 34.287
+| Global Round : 1/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 1.255 | Train_Acc: 52.154
+| Global Round : 1/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 1.079 | Train_Acc: 59.539
+| Global Round : 1/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.964 | Train_Acc: 63.895
+| Global Round : 1/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.869 | Train_Acc: 67.483
+aggregating weights...
+lambda: tensor([0.3322, 0.3339, 0.3339])
+| Client id:0 | Test_Loss: 2.932 | Test_Acc: 8.161
+| Global Round : 2/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.608 | Train_Acc: 76.455
+| Global Round : 2/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.464 | Train_Acc: 82.161
+| Global Round : 2/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.403 | Train_Acc: 84.759
+| Global Round : 2/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.350 | Train_Acc: 86.871
+| Global Round : 2/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.301 | Train_Acc: 88.342
+| Client id:1 | Test_Loss: 1.463 | Test_Acc: 55.746
+| Global Round : 2/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.935 | Train_Acc: 65.733
+| Global Round : 2/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.802 | Train_Acc: 70.449
+| Global Round : 2/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.709 | Train_Acc: 74.265
+| Global Round : 2/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.608 | Train_Acc: 78.213
+| Global Round : 2/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.505 | Train_Acc: 81.945
+| Client id:2 | Test_Loss: 1.453 | Test_Acc: 55.699
+| Global Round : 2/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.941 | Train_Acc: 65.305
+| Global Round : 2/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.807 | Train_Acc: 70.212
+| Global Round : 2/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.701 | Train_Acc: 74.490
+| Global Round : 2/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.610 | Train_Acc: 77.922
+| Global Round : 2/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.522 | Train_Acc: 80.880
+aggregating weights...
+lambda: tensor([0.3813, 0.3096, 0.3091])
+| Client id:0 | Test_Loss: 2.233 | Test_Acc: 15.962
+| Global Round : 3/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.431 | Train_Acc: 83.229
+| Global Round : 3/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.316 | Train_Acc: 87.958
+| Global Round : 3/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.260 | Train_Acc: 90.244
+| Global Round : 3/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.203 | Train_Acc: 92.290
+| Global Round : 3/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.157 | Train_Acc: 94.126
+| Client id:1 | Test_Loss: 1.271 | Test_Acc: 55.626
+| Global Round : 3/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.715 | Train_Acc: 73.977
+| Global Round : 3/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.552 | Train_Acc: 79.965
+| Global Round : 3/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.440 | Train_Acc: 84.045
+| Global Round : 3/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.341 | Train_Acc: 87.718
+| Global Round : 3/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.259 | Train_Acc: 90.748
+| Client id:2 | Test_Loss: 1.242 | Test_Acc: 55.969
+| Global Round : 3/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.712 | Train_Acc: 74.004
+| Global Round : 3/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.553 | Train_Acc: 79.980
+| Global Round : 3/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.448 | Train_Acc: 83.705
+| Global Round : 3/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.340 | Train_Acc: 87.773
+| Global Round : 3/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.266 | Train_Acc: 90.371
+aggregating weights...
+lambda: tensor([0.4139, 0.2940, 0.2921])
+| Client id:0 | Test_Loss: 1.761 | Test_Acc: 36.694
+| Global Round : 4/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.311 | Train_Acc: 88.222
+| Global Round : 4/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.190 | Train_Acc: 92.956
+| Global Round : 4/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.126 | Train_Acc: 95.338
+| Global Round : 4/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.104 | Train_Acc: 96.178
+| Global Round : 4/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.086 | Train_Acc: 97.006
+| Client id:1 | Test_Loss: 1.158 | Test_Acc: 60.666
+| Global Round : 4/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.556 | Train_Acc: 79.773
+| Global Round : 4/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.380 | Train_Acc: 86.277
+| Global Round : 4/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.265 | Train_Acc: 90.628
+| Global Round : 4/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.181 | Train_Acc: 93.604
+| Global Round : 4/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.153 | Train_Acc: 94.732
+| Client id:2 | Test_Loss: 1.120 | Test_Acc: 61.578
+| Global Round : 4/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.557 | Train_Acc: 79.788
+| Global Round : 4/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.370 | Train_Acc: 86.291
+| Global Round : 4/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.255 | Train_Acc: 90.785
+| Global Round : 4/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.185 | Train_Acc: 93.653
+| Global Round : 4/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.148 | Train_Acc: 95.026
+aggregating weights...
+lambda: tensor([0.4346, 0.2846, 0.2808])
+| Client id:0 | Test_Loss: 1.706 | Test_Acc: 45.875
+| Global Round : 5/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.216 | Train_Acc: 91.744
+| Global Round : 5/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.114 | Train_Acc: 95.668
+| Global Round : 5/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.071 | Train_Acc: 97.438
+| Global Round : 5/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.061 | Train_Acc: 97.936
+| Global Round : 5/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.048 | Train_Acc: 98.416
+| Client id:1 | Test_Loss: 1.268 | Test_Acc: 59.886
+| Global Round : 5/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.457 | Train_Acc: 83.187
+| Global Round : 5/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.257 | Train_Acc: 90.916
+| Global Round : 5/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.172 | Train_Acc: 94.060
+| Global Round : 5/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.118 | Train_Acc: 96.010
+| Global Round : 5/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.103 | Train_Acc: 96.532
+| Client id:2 | Test_Loss: 1.198 | Test_Acc: 61.158
+| Global Round : 5/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.457 | Train_Acc: 83.285
+| Global Round : 5/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.251 | Train_Acc: 91.211
+| Global Round : 5/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.175 | Train_Acc: 93.988
+| Global Round : 5/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.119 | Train_Acc: 96.004
+| Global Round : 5/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.100 | Train_Acc: 96.712
+aggregating weights...
+lambda: tensor([0.4504, 0.2785, 0.2711])
+| Client id:0 | Test_Loss: 1.590 | Test_Acc: 51.005
+| Global Round : 6/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.158 | Train_Acc: 94.096
+| Global Round : 6/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.077 | Train_Acc: 97.210
+| Global Round : 6/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.051 | Train_Acc: 98.266
+| Global Round : 6/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.034 | Train_Acc: 98.962
+| Global Round : 6/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.027 | Train_Acc: 99.196
+| Client id:1 | Test_Loss: 1.362 | Test_Acc: 59.586
+| Global Round : 6/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.371 | Train_Acc: 86.355
+| Global Round : 6/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.191 | Train_Acc: 93.442
+| Global Round : 6/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.116 | Train_Acc: 96.022
+| Global Round : 6/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.082 | Train_Acc: 97.516
+| Global Round : 6/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.068 | Train_Acc: 97.810
+| Client id:2 | Test_Loss: 1.276 | Test_Acc: 59.868
+| Global Round : 6/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.385 | Train_Acc: 85.979
+| Global Round : 6/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.190 | Train_Acc: 93.245
+| Global Round : 6/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.122 | Train_Acc: 95.776
+| Global Round : 6/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.079 | Train_Acc: 97.342
+| Global Round : 6/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.075 | Train_Acc: 97.486
+aggregating weights...
+lambda: tensor([0.4594, 0.2761, 0.2645])
+| Client id:0 | Test_Loss: 1.491 | Test_Acc: 54.995
+| Global Round : 7/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.123 | Train_Acc: 95.398
+| Global Round : 7/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.066 | Train_Acc: 97.522
+| Global Round : 7/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.047 | Train_Acc: 98.512
+| Global Round : 7/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.030 | Train_Acc: 99.058
+| Global Round : 7/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.017 | Train_Acc: 99.574
+| Client id:1 | Test_Loss: 1.464 | Test_Acc: 57.876
+| Global Round : 7/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.317 | Train_Acc: 88.654
+| Global Round : 7/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.163 | Train_Acc: 94.492
+| Global Round : 7/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.114 | Train_Acc: 96.238
+| Global Round : 7/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.078 | Train_Acc: 97.504
+| Global Round : 7/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.056 | Train_Acc: 98.314
+| Client id:2 | Test_Loss: 1.376 | Test_Acc: 59.238
+| Global Round : 7/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.323 | Train_Acc: 88.289
+| Global Round : 7/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.162 | Train_Acc: 94.372
+| Global Round : 7/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.091 | Train_Acc: 97.204
+| Global Round : 7/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.073 | Train_Acc: 97.468
+| Global Round : 7/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.064 | Train_Acc: 97.954
+aggregating weights...
+lambda: tensor([0.4618, 0.2771, 0.2611])
+| Client id:0 | Test_Loss: 1.578 | Test_Acc: 54.785
+| Global Round : 8/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.101 | Train_Acc: 96.298
+| Global Round : 8/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.045 | Train_Acc: 98.602
+| Global Round : 8/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.037 | Train_Acc: 98.752
+| Global Round : 8/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.022 | Train_Acc: 99.310
+| Global Round : 8/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.012 | Train_Acc: 99.706
+| Client id:1 | Test_Loss: 1.509 | Test_Acc: 58.626
+| Global Round : 8/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.266 | Train_Acc: 90.418
+| Global Round : 8/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.136 | Train_Acc: 95.428
+| Global Round : 8/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.106 | Train_Acc: 96.304
+| Global Round : 8/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.077 | Train_Acc: 97.444
+| Global Round : 8/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.054 | Train_Acc: 98.356
+| Client id:2 | Test_Loss: 1.410 | Test_Acc: 59.928
+| Global Round : 8/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.282 | Train_Acc: 89.573
+| Global Round : 8/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.143 | Train_Acc: 95.176
+| Global Round : 8/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.101 | Train_Acc: 96.784
+| Global Round : 8/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.059 | Train_Acc: 98.170
+| Global Round : 8/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.034 | Train_Acc: 98.986
+aggregating weights...
+lambda: tensor([0.4657, 0.2776, 0.2566])
+| Client id:0 | Test_Loss: 1.448 | Test_Acc: 59.736
+| Global Round : 9/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.089 | Train_Acc: 96.850
+| Global Round : 9/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.038 | Train_Acc: 98.782
+| Global Round : 9/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.034 | Train_Acc: 98.848
+| Global Round : 9/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.029 | Train_Acc: 99.034
+| Global Round : 9/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.023 | Train_Acc: 99.268
+| Client id:1 | Test_Loss: 1.573 | Test_Acc: 56.946
+| Global Round : 9/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.217 | Train_Acc: 92.422
+| Global Round : 9/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.122 | Train_Acc: 95.974
+| Global Round : 9/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.089 | Train_Acc: 97.066
+| Global Round : 9/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.066 | Train_Acc: 97.846
+| Global Round : 9/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.051 | Train_Acc: 98.482
+| Client id:2 | Test_Loss: 1.459 | Test_Acc: 58.968
+| Global Round : 9/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.266 | Train_Acc: 90.365
+| Global Round : 9/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.125 | Train_Acc: 95.824
+| Global Round : 9/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.083 | Train_Acc: 97.300
+| Global Round : 9/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.046 | Train_Acc: 98.596
+| Global Round : 9/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.032 | Train_Acc: 99.142
+aggregating weights...
+lambda: tensor([0.4634, 0.2816, 0.2549])
+| Client id:0 | Test_Loss: 1.644 | Test_Acc: 52.355
+| Global Round : 10/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.077 | Train_Acc: 97.306
+| Global Round : 10/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.040 | Train_Acc: 98.698
+| Global Round : 10/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.017 | Train_Acc: 99.538
+| Global Round : 10/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.017 | Train_Acc: 99.544
+| Global Round : 10/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.008 | Train_Acc: 99.826
+| Client id:1 | Test_Loss: 1.630 | Test_Acc: 57.636
+| Global Round : 10/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.195 | Train_Acc: 93.196
+| Global Round : 10/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.114 | Train_Acc: 96.154
+| Global Round : 10/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.082 | Train_Acc: 97.354
+| Global Round : 10/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.056 | Train_Acc: 98.290
+| Global Round : 10/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.037 | Train_Acc: 98.884
+| Client id:2 | Test_Loss: 1.524 | Test_Acc: 59.958
+| Global Round : 10/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.243 | Train_Acc: 91.415
+| Global Round : 10/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.108 | Train_Acc: 96.328
+| Global Round : 10/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.090 | Train_Acc: 97.042
+| Global Round : 10/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.057 | Train_Acc: 98.218
+| Global Round : 10/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.051 | Train_Acc: 98.470
+aggregating weights...
+lambda: tensor([0.4657, 0.2831, 0.2512])
+| Client id:0 | Test_Loss: 1.625 | Test_Acc: 54.425
+| Global Round : 11/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.077 | Train_Acc: 97.264
+| Global Round : 11/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.039 | Train_Acc: 98.710
+| Global Round : 11/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.027 | Train_Acc: 99.154
+| Global Round : 11/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.012 | Train_Acc: 99.712
+| Global Round : 11/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.006 | Train_Acc: 99.898
+| Client id:1 | Test_Loss: 1.621 | Test_Acc: 59.106
+| Global Round : 11/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.163 | Train_Acc: 94.222
+| Global Round : 11/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.099 | Train_Acc: 96.634
+| Global Round : 11/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.083 | Train_Acc: 97.276
+| Global Round : 11/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.071 | Train_Acc: 97.732
+| Global Round : 11/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.048 | Train_Acc: 98.542
+| Client id:2 | Test_Loss: 1.559 | Test_Acc: 59.928
+| Global Round : 11/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.213 | Train_Acc: 92.483
+| Global Round : 11/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.107 | Train_Acc: 96.292
+| Global Round : 11/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.068 | Train_Acc: 97.876
+| Global Round : 11/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.054 | Train_Acc: 98.266
+| Global Round : 11/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.054 | Train_Acc: 98.278
+aggregating weights...
+lambda: tensor([0.4669, 0.2841, 0.2490])
+| Client id:0 | Test_Loss: 1.508 | Test_Acc: 59.916
+| Global Round : 12/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.065 | Train_Acc: 97.918
+| Global Round : 12/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.043 | Train_Acc: 98.608
+| Global Round : 12/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.025 | Train_Acc: 99.244
+| Global Round : 12/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.008 | Train_Acc: 99.868
+| Global Round : 12/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.006 | Train_Acc: 99.916
+| Client id:1 | Test_Loss: 1.692 | Test_Acc: 55.746
+| Global Round : 12/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.144 | Train_Acc: 95.086
+| Global Round : 12/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.090 | Train_Acc: 97.030
+| Global Round : 12/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.060 | Train_Acc: 98.110
+| Global Round : 12/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.049 | Train_Acc: 98.554
+| Global Round : 12/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.043 | Train_Acc: 98.626
+| Client id:2 | Test_Loss: 1.605 | Test_Acc: 57.469
+| Global Round : 12/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.205 | Train_Acc: 92.891
+| Global Round : 12/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.093 | Train_Acc: 97.006
+| Global Round : 12/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.073 | Train_Acc: 97.600
+| Global Round : 12/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.068 | Train_Acc: 97.774
+| Global Round : 12/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.033 | Train_Acc: 99.070
+aggregating weights...
+lambda: tensor([0.4622, 0.2886, 0.2492])
+| Client id:0 | Test_Loss: 1.847 | Test_Acc: 48.815
+| Global Round : 13/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.080 | Train_Acc: 97.174
+| Global Round : 13/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.038 | Train_Acc: 98.878
+| Global Round : 13/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.023 | Train_Acc: 99.238
+| Global Round : 13/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.012 | Train_Acc: 99.712
+| Global Round : 13/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.006 | Train_Acc: 99.892
+| Client id:1 | Test_Loss: 1.623 | Test_Acc: 60.126
+| Global Round : 13/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.136 | Train_Acc: 95.530
+| Global Round : 13/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.080 | Train_Acc: 97.480
+| Global Round : 13/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.060 | Train_Acc: 97.990
+| Global Round : 13/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.046 | Train_Acc: 98.620
+| Global Round : 13/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.030 | Train_Acc: 99.142
+| Client id:2 | Test_Loss: 1.530 | Test_Acc: 61.998
+| Global Round : 13/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.176 | Train_Acc: 94.012
+| Global Round : 13/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.098 | Train_Acc: 96.610
+| Global Round : 13/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.067 | Train_Acc: 97.906
+| Global Round : 13/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.050 | Train_Acc: 98.470
+| Global Round : 13/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.057 | Train_Acc: 98.320
+aggregating weights...
+lambda: tensor([0.4712, 0.2864, 0.2424])
+| Client id:0 | Test_Loss: 1.430 | Test_Acc: 62.226
+| Global Round : 14/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.073 | Train_Acc: 97.480
+| Global Round : 14/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.032 | Train_Acc: 99.058
+| Global Round : 14/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.029 | Train_Acc: 99.082
+| Global Round : 14/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.022 | Train_Acc: 99.328
+| Global Round : 14/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.013 | Train_Acc: 99.646
+| Client id:1 | Test_Loss: 1.619 | Test_Acc: 56.376
+| Global Round : 14/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.123 | Train_Acc: 95.998
+| Global Round : 14/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.080 | Train_Acc: 97.414
+| Global Round : 14/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.075 | Train_Acc: 97.600
+| Global Round : 14/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.053 | Train_Acc: 98.368
+| Global Round : 14/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.034 | Train_Acc: 98.956
+| Client id:2 | Test_Loss: 1.562 | Test_Acc: 58.368
+| Global Round : 14/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.177 | Train_Acc: 93.958
+| Global Round : 14/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.104 | Train_Acc: 96.538
+| Global Round : 14/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.075 | Train_Acc: 97.606
+| Global Round : 14/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.044 | Train_Acc: 98.662
+| Global Round : 14/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.033 | Train_Acc: 99.052
+aggregating weights...
+lambda: tensor([0.4659, 0.2905, 0.2436])
+| Client id:0 | Test_Loss: 1.722 | Test_Acc: 54.185
+| Global Round : 15/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.052 | Train_Acc: 98.308
+| Global Round : 15/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.019 | Train_Acc: 99.538
+| Global Round : 15/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.017 | Train_Acc: 99.526
+| Global Round : 15/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.011 | Train_Acc: 99.724
+| Global Round : 15/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.005 | Train_Acc: 99.952
+| Client id:1 | Test_Loss: 1.584 | Test_Acc: 58.896
+| Global Round : 15/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.110 | Train_Acc: 96.628
+| Global Round : 15/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.071 | Train_Acc: 97.618
+| Global Round : 15/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.088 | Train_Acc: 97.210
+| Global Round : 15/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.067 | Train_Acc: 97.882
+| Global Round : 15/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.048 | Train_Acc: 98.650
+| Client id:2 | Test_Loss: 1.520 | Test_Acc: 61.188
+| Global Round : 15/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.177 | Train_Acc: 93.725
+| Global Round : 15/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.100 | Train_Acc: 96.796
+| Global Round : 15/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.070 | Train_Acc: 97.738
+| Global Round : 15/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.056 | Train_Acc: 98.176
+| Global Round : 15/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.047 | Train_Acc: 98.614
+aggregating weights...
+lambda: tensor([0.4715, 0.2893, 0.2392])
+| Client id:0 | Test_Loss: 1.560 | Test_Acc: 57.456
+| Global Round : 16/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.074 | Train_Acc: 97.438
+| Global Round : 16/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.042 | Train_Acc: 98.620
+| Global Round : 16/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.023 | Train_Acc: 99.352
+| Global Round : 16/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.014 | Train_Acc: 99.664
+| Global Round : 16/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.004 | Train_Acc: 99.970
+| Client id:1 | Test_Loss: 1.547 | Test_Acc: 58.026
+| Global Round : 16/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.103 | Train_Acc: 96.688
+| Global Round : 16/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.066 | Train_Acc: 98.092
+| Global Round : 16/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.065 | Train_Acc: 97.948
+| Global Round : 16/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.055 | Train_Acc: 98.326
+| Global Round : 16/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.046 | Train_Acc: 98.596
+| Client id:2 | Test_Loss: 1.468 | Test_Acc: 60.528
+| Global Round : 16/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.164 | Train_Acc: 94.252
+| Global Round : 16/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.083 | Train_Acc: 97.186
+| Global Round : 16/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.059 | Train_Acc: 98.116
+| Global Round : 16/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.046 | Train_Acc: 98.494
+| Global Round : 16/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.042 | Train_Acc: 98.608
+aggregating weights...
+lambda: tensor([0.4733, 0.2904, 0.2363])
+| Client id:0 | Test_Loss: 1.539 | Test_Acc: 57.216
+| Global Round : 17/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.040 | Train_Acc: 98.806
+| Global Round : 17/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.027 | Train_Acc: 99.184
+| Global Round : 17/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.034 | Train_Acc: 98.848
+| Global Round : 17/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.010 | Train_Acc: 99.826
+| Global Round : 17/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.005 | Train_Acc: 99.910
+| Client id:1 | Test_Loss: 1.595 | Test_Acc: 59.346
+| Global Round : 17/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.088 | Train_Acc: 97.414
+| Global Round : 17/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.057 | Train_Acc: 98.314
+| Global Round : 17/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.058 | Train_Acc: 98.230
+| Global Round : 17/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.067 | Train_Acc: 97.822
+| Global Round : 17/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.074 | Train_Acc: 97.480
+| Client id:2 | Test_Loss: 1.487 | Test_Acc: 60.018
+| Global Round : 17/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.161 | Train_Acc: 94.360
+| Global Round : 17/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.091 | Train_Acc: 97.042
+| Global Round : 17/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.065 | Train_Acc: 97.912
+| Global Round : 17/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.050 | Train_Acc: 98.404
+| Global Round : 17/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.031 | Train_Acc: 99.082
+aggregating weights...
+lambda: tensor([0.4732, 0.2931, 0.2337])
+| Client id:0 | Test_Loss: 1.686 | Test_Acc: 53.015
+| Global Round : 18/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.059 | Train_Acc: 98.008
+| Global Round : 18/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.038 | Train_Acc: 98.836
+| Global Round : 18/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.022 | Train_Acc: 99.328
+| Global Round : 18/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.008 | Train_Acc: 99.868
+| Global Round : 18/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.003 | Train_Acc: 99.982
+| Client id:1 | Test_Loss: 1.497 | Test_Acc: 61.026
+| Global Round : 18/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.087 | Train_Acc: 97.390
+| Global Round : 18/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.056 | Train_Acc: 98.260
+| Global Round : 18/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.053 | Train_Acc: 98.356
+| Global Round : 18/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.046 | Train_Acc: 98.620
+| Global Round : 18/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.036 | Train_Acc: 98.950
+| Client id:2 | Test_Loss: 1.440 | Test_Acc: 61.998
+| Global Round : 18/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.169 | Train_Acc: 94.048
+| Global Round : 18/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.099 | Train_Acc: 96.676
+| Global Round : 18/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.063 | Train_Acc: 97.990
+| Global Round : 18/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.051 | Train_Acc: 98.446
+| Global Round : 18/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.047 | Train_Acc: 98.458
+aggregating weights...
+lambda: tensor([0.4805, 0.2909, 0.2286])
+| Client id:0 | Test_Loss: 1.410 | Test_Acc: 61.146
+| Global Round : 19/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.054 | Train_Acc: 98.284
+| Global Round : 19/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.042 | Train_Acc: 98.584
+| Global Round : 19/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.021 | Train_Acc: 99.478
+| Global Round : 19/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.005 | Train_Acc: 99.946
+| Global Round : 19/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.002 | Train_Acc: 99.988
+| Client id:1 | Test_Loss: 1.602 | Test_Acc: 57.516
+| Global Round : 19/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.098 | Train_Acc: 96.868
+| Global Round : 19/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.073 | Train_Acc: 97.642
+| Global Round : 19/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.081 | Train_Acc: 97.444
+| Global Round : 19/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.073 | Train_Acc: 97.690
+| Global Round : 19/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.059 | Train_Acc: 98.146
+| Client id:2 | Test_Loss: 1.509 | Test_Acc: 59.988
+| Global Round : 19/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.158 | Train_Acc: 94.624
+| Global Round : 19/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.084 | Train_Acc: 97.234
+| Global Round : 19/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.050 | Train_Acc: 98.428
+| Global Round : 19/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.039 | Train_Acc: 98.836
+| Global Round : 19/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.022 | Train_Acc: 99.412
+aggregating weights...
+lambda: tensor([0.4756, 0.2957, 0.2287])
+| Client id:0 | Test_Loss: 1.625 | Test_Acc: 54.485
+| Global Round : 20/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.051 | Train_Acc: 98.416
+| Global Round : 20/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.046 | Train_Acc: 98.476
+| Global Round : 20/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.032 | Train_Acc: 99.040
+| Global Round : 20/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.023 | Train_Acc: 99.328
+| Global Round : 20/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.007 | Train_Acc: 99.868
+| Client id:1 | Test_Loss: 1.585 | Test_Acc: 59.946
+| Global Round : 20/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.063 | Train_Acc: 98.284
+| Global Round : 20/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.031 | Train_Acc: 99.190
+| Global Round : 20/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.010 | Train_Acc: 99.898
+| Global Round : 20/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.005 | Train_Acc: 99.958
+| Global Round : 20/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.002 | Train_Acc: 100.000
+| Client id:2 | Test_Loss: 1.497 | Test_Acc: 62.118
+| Global Round : 20/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.162 | Train_Acc: 94.402
+| Global Round : 20/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.107 | Train_Acc: 96.550
+| Global Round : 20/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.069 | Train_Acc: 97.624
+| Global Round : 20/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.055 | Train_Acc: 98.290
+| Global Round : 20/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.031 | Train_Acc: 99.052
+aggregating weights...
+lambda: tensor([0.4784, 0.2965, 0.2251])
+| Client id:0 | Test_Loss: 1.309 | Test_Acc: 65.767
+| Global Round : 21/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.024 | Train_Acc: 99.382
+| Global Round : 21/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.009 | Train_Acc: 99.838
+| Global Round : 21/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.003 | Train_Acc: 99.982
+| Global Round : 21/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.002 | Train_Acc: 100.000
+| Global Round : 21/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.002 | Train_Acc: 100.000
+| Client id:1 | Test_Loss: 1.834 | Test_Acc: 53.705
+| Global Round : 21/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.132 | Train_Acc: 95.926
+| Global Round : 21/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.106 | Train_Acc: 96.712
+| Global Round : 21/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.080 | Train_Acc: 97.402
+| Global Round : 21/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.068 | Train_Acc: 97.786
+| Global Round : 21/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.047 | Train_Acc: 98.464
+| Client id:2 | Test_Loss: 1.737 | Test_Acc: 55.609
+| Global Round : 21/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.158 | Train_Acc: 94.636
+| Global Round : 21/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.086 | Train_Acc: 97.300
+| Global Round : 21/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.065 | Train_Acc: 97.900
+| Global Round : 21/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.030 | Train_Acc: 99.160
+| Global Round : 21/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.023 | Train_Acc: 99.430
+aggregating weights...
+lambda: tensor([0.4626, 0.3068, 0.2306])
+| Client id:0 | Test_Loss: 2.250 | Test_Acc: 40.744
+| Global Round : 22/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.088 | Train_Acc: 96.940
+| Global Round : 22/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.049 | Train_Acc: 98.344
+| Global Round : 22/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.045 | Train_Acc: 98.446
+| Global Round : 22/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.028 | Train_Acc: 99.124
+| Global Round : 22/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.022 | Train_Acc: 99.388
+| Client id:1 | Test_Loss: 1.302 | Test_Acc: 66.607
+| Global Round : 22/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.061 | Train_Acc: 98.422
+| Global Round : 22/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.042 | Train_Acc: 98.980
+| Global Round : 22/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.046 | Train_Acc: 98.632
+| Global Round : 22/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.038 | Train_Acc: 98.878
+| Global Round : 22/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.048 | Train_Acc: 98.470
+| Client id:2 | Test_Loss: 1.221 | Test_Acc: 68.296
+| Global Round : 22/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.149 | Train_Acc: 95.122
+| Global Round : 22/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.088 | Train_Acc: 97.198
+| Global Round : 22/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.068 | Train_Acc: 97.792
+| Global Round : 22/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.050 | Train_Acc: 98.368
+| Global Round : 22/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.032 | Train_Acc: 98.974
+aggregating weights...
+lambda: tensor([0.4955, 0.2923, 0.2122])
+| Client id:0 | Test_Loss: 1.140 | Test_Acc: 69.097
+| Global Round : 23/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.038 | Train_Acc: 98.746
+| Global Round : 23/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.028 | Train_Acc: 99.184
+| Global Round : 23/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.012 | Train_Acc: 99.742
+| Global Round : 23/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.003 | Train_Acc: 99.970
+| Global Round : 23/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.002 | Train_Acc: 99.976
+| Client id:1 | Test_Loss: 1.885 | Test_Acc: 49.805
+| Global Round : 23/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.117 | Train_Acc: 96.214
+| Global Round : 23/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.086 | Train_Acc: 97.270
+| Global Round : 23/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.066 | Train_Acc: 97.918
+| Global Round : 23/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.044 | Train_Acc: 98.734
+| Global Round : 23/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.032 | Train_Acc: 98.992
+| Client id:2 | Test_Loss: 1.814 | Test_Acc: 51.080
+| Global Round : 23/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.170 | Train_Acc: 94.060
+| Global Round : 23/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.104 | Train_Acc: 96.628
+| Global Round : 23/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.067 | Train_Acc: 97.744
+| Global Round : 23/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.054 | Train_Acc: 98.302
+| Global Round : 23/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.051 | Train_Acc: 98.380
+aggregating weights...
+lambda: tensor([0.4718, 0.3059, 0.2222])
+| Client id:0 | Test_Loss: 2.052 | Test_Acc: 43.834
+| Global Round : 24/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.059 | Train_Acc: 98.032
+| Global Round : 24/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.028 | Train_Acc: 99.124
+| Global Round : 24/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.035 | Train_Acc: 98.926
+| Global Round : 24/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.022 | Train_Acc: 99.454
+| Global Round : 24/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.016 | Train_Acc: 99.502
+| Client id:1 | Test_Loss: 1.363 | Test_Acc: 64.986
+| Global Round : 24/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.060 | Train_Acc: 98.368
+| Global Round : 24/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.045 | Train_Acc: 98.752
+| Global Round : 24/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.052 | Train_Acc: 98.368
+| Global Round : 24/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.057 | Train_Acc: 98.218
+| Global Round : 24/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.052 | Train_Acc: 98.356
+| Client id:2 | Test_Loss: 1.294 | Test_Acc: 65.987
+| Global Round : 24/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.155 | Train_Acc: 94.786
+| Global Round : 24/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.084 | Train_Acc: 97.492
+| Global Round : 24/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.053 | Train_Acc: 98.368
+| Global Round : 24/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.047 | Train_Acc: 98.620
+| Global Round : 24/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.027 | Train_Acc: 99.304
+aggregating weights...
+lambda: tensor([0.4960, 0.2956, 0.2084])
+| Client id:0 | Test_Loss: 1.214 | Test_Acc: 66.967
+| Global Round : 25/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.025 | Train_Acc: 99.298
+| Global Round : 25/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.018 | Train_Acc: 99.544
+| Global Round : 25/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.012 | Train_Acc: 99.706
+| Global Round : 25/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.004 | Train_Acc: 99.964
+| Global Round : 25/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.002 | Train_Acc: 100.000
+| Client id:1 | Test_Loss: 1.799 | Test_Acc: 51.575
+| Global Round : 25/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.071 | Train_Acc: 98.002
+| Global Round : 25/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.051 | Train_Acc: 98.500
+| Global Round : 25/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.050 | Train_Acc: 98.416
+| Global Round : 25/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.054 | Train_Acc: 98.284
+| Global Round : 25/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.068 | Train_Acc: 97.768
+| Client id:2 | Test_Loss: 1.707 | Test_Acc: 52.639
+| Global Round : 25/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.180 | Train_Acc: 93.916
+| Global Round : 25/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.093 | Train_Acc: 96.916
+| Global Round : 25/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.072 | Train_Acc: 97.654
+| Global Round : 25/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.037 | Train_Acc: 98.926
+| Global Round : 25/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.021 | Train_Acc: 99.514
+aggregating weights...
+lambda: tensor([0.4780, 0.3069, 0.2151])
+| Client id:0 | Test_Loss: 1.759 | Test_Acc: 49.865
+| Global Round : 26/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.063 | Train_Acc: 97.786
+| Global Round : 26/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.058 | Train_Acc: 97.942
+| Global Round : 26/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.026 | Train_Acc: 99.220
+| Global Round : 26/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.018 | Train_Acc: 99.472
+| Global Round : 26/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.006 | Train_Acc: 99.928
+| Client id:1 | Test_Loss: 1.405 | Test_Acc: 64.056
+| Global Round : 26/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.056 | Train_Acc: 98.482
+| Global Round : 26/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.046 | Train_Acc: 98.662
+| Global Round : 26/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.043 | Train_Acc: 98.722
+| Global Round : 26/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.026 | Train_Acc: 99.346
+| Global Round : 26/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.032 | Train_Acc: 99.058
+| Client id:2 | Test_Loss: 1.337 | Test_Acc: 64.787
+| Global Round : 26/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.147 | Train_Acc: 95.404
+| Global Round : 26/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.105 | Train_Acc: 96.514
+| Global Round : 26/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.080 | Train_Acc: 97.324
+| Global Round : 26/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.058 | Train_Acc: 98.194
+| Global Round : 26/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.036 | Train_Acc: 98.914
+aggregating weights...
+lambda: tensor([0.4909, 0.3021, 0.2070])
+| Client id:0 | Test_Loss: 1.229 | Test_Acc: 67.657
+| Global Round : 27/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.028 | Train_Acc: 99.220
+| Global Round : 27/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.013 | Train_Acc: 99.670
+| Global Round : 27/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.008 | Train_Acc: 99.856
+| Global Round : 27/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.002 | Train_Acc: 100.000
+| Global Round : 27/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.001 | Train_Acc: 100.000
+| Client id:1 | Test_Loss: 1.765 | Test_Acc: 52.415
+| Global Round : 27/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.080 | Train_Acc: 97.636
+| Global Round : 27/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.050 | Train_Acc: 98.506
+| Global Round : 27/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.062 | Train_Acc: 98.164
+| Global Round : 27/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.082 | Train_Acc: 97.336
+| Global Round : 27/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.044 | Train_Acc: 98.644
+| Client id:2 | Test_Loss: 1.643 | Test_Acc: 54.379
+| Global Round : 27/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.160 | Train_Acc: 94.708
+| Global Round : 27/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.093 | Train_Acc: 96.934
+| Global Round : 27/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.066 | Train_Acc: 97.882
+| Global Round : 27/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.042 | Train_Acc: 98.692
+| Global Round : 27/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.020 | Train_Acc: 99.454
+aggregating weights...
+lambda: tensor([0.4751, 0.3131, 0.2118])
+| Client id:0 | Test_Loss: 2.075 | Test_Acc: 44.614
+| Global Round : 28/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.076 | Train_Acc: 97.414
+| Global Round : 28/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.047 | Train_Acc: 98.464
+| Global Round : 28/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.045 | Train_Acc: 98.530
+| Global Round : 28/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.015 | Train_Acc: 99.646
+| Global Round : 28/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.003 | Train_Acc: 99.988
+| Client id:1 | Test_Loss: 1.433 | Test_Acc: 63.666
+| Global Round : 28/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.041 | Train_Acc: 99.094
+| Global Round : 28/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.016 | Train_Acc: 99.754
+| Global Round : 28/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.005 | Train_Acc: 99.976
+| Global Round : 28/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.002 | Train_Acc: 100.000
+| Global Round : 28/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.002 | Train_Acc: 100.000
+| Client id:2 | Test_Loss: 1.345 | Test_Acc: 64.877
+| Global Round : 28/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.159 | Train_Acc: 94.870
+| Global Round : 28/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.096 | Train_Acc: 96.844
+| Global Round : 28/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.084 | Train_Acc: 97.228
+| Global Round : 28/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.055 | Train_Acc: 98.188
+| Global Round : 28/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.037 | Train_Acc: 98.848
+aggregating weights...
+lambda: tensor([0.4980, 0.3038, 0.1982])
+| Client id:0 | Test_Loss: 1.032 | Test_Acc: 73.057
+| Global Round : 29/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.015 | Train_Acc: 99.682
+| Global Round : 29/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.007 | Train_Acc: 99.892
+| Global Round : 29/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.002 | Train_Acc: 99.994
+| Global Round : 29/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.002 | Train_Acc: 99.994
+| Global Round : 29/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.002 | Train_Acc: 100.000
+| Client id:1 | Test_Loss: 2.164 | Test_Acc: 45.455
+| Global Round : 29/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.138 | Train_Acc: 95.386
+| Global Round : 29/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.098 | Train_Acc: 96.808
+| Global Round : 29/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.094 | Train_Acc: 96.982
+| Global Round : 29/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.068 | Train_Acc: 97.924
+| Global Round : 29/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.045 | Train_Acc: 98.638
+| Client id:2 | Test_Loss: 2.097 | Test_Acc: 46.761
+| Global Round : 29/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.168 | Train_Acc: 94.528
+| Global Round : 29/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.084 | Train_Acc: 97.426
+| Global Round : 29/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.055 | Train_Acc: 98.206
+| Global Round : 29/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.052 | Train_Acc: 98.368
+| Global Round : 29/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.036 | Train_Acc: 98.968
+aggregating weights...
+lambda: tensor([0.4613, 0.3238, 0.2148])
+| Client id:0 | Test_Loss: 2.348 | Test_Acc: 34.773
+| Global Round : 30/30 | Client id:0 | Local Epoch : 1/5 |  Train_Loss: 0.096 | Train_Acc: 96.598
+| Global Round : 30/30 | Client id:0 | Local Epoch : 2/5 |  Train_Loss: 0.044 | Train_Acc: 98.494
+| Global Round : 30/30 | Client id:0 | Local Epoch : 3/5 |  Train_Loss: 0.032 | Train_Acc: 98.974
+| Global Round : 30/30 | Client id:0 | Local Epoch : 4/5 |  Train_Loss: 0.024 | Train_Acc: 99.304
+| Global Round : 30/30 | Client id:0 | Local Epoch : 5/5 |  Train_Loss: 0.025 | Train_Acc: 99.238
+| Client id:1 | Test_Loss: 1.166 | Test_Acc: 69.127
+| Global Round : 30/30 | Client id:1 | Local Epoch : 1/5 |  Train_Loss: 0.043 | Train_Acc: 99.046
+| Global Round : 30/30 | Client id:1 | Local Epoch : 2/5 |  Train_Loss: 0.021 | Train_Acc: 99.592
+| Global Round : 30/30 | Client id:1 | Local Epoch : 3/5 |  Train_Loss: 0.007 | Train_Acc: 99.970
+| Global Round : 30/30 | Client id:1 | Local Epoch : 4/5 |  Train_Loss: 0.003 | Train_Acc: 100.000
+| Global Round : 30/30 | Client id:1 | Local Epoch : 5/5 |  Train_Loss: 0.002 | Train_Acc: 100.000
+| Client id:2 | Test_Loss: 1.071 | Test_Acc: 70.456
+| Global Round : 30/30 | Client id:2 | Local Epoch : 1/5 |  Train_Loss: 0.145 | Train_Acc: 95.098
+| Global Round : 30/30 | Client id:2 | Local Epoch : 2/5 |  Train_Loss: 0.093 | Train_Acc: 97.048
+| Global Round : 30/30 | Client id:2 | Local Epoch : 3/5 |  Train_Loss: 0.065 | Train_Acc: 97.966
+| Global Round : 30/30 | Client id:2 | Local Epoch : 4/5 |  Train_Loss: 0.048 | Train_Acc: 98.578
+| Global Round : 30/30 | Client id:2 | Local Epoch : 5/5 |  Train_Loss: 0.036 | Train_Acc: 98.932
+aggregating weights...
+lambda: tensor([0.5023, 0.3057, 0.1920])
