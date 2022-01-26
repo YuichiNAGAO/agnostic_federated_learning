@@ -43,12 +43,38 @@ docker run -it -v <host dir>:/app --gpus all agnostic_federated_learning
 ### Run experiment
 
 #### IID
+
+##### cidar10
 ```
+# FedAvg
 python main.py --dataset cifar10 --federated_type fedavg --data_dist iid
+# AFL
+python main.py --dataset cifar10 --federated_type afl --data_dist iid
 ```
+##### mnist
+```
+# FedAvg
+python main.py --dataset mnist --federated_type fedavg --data_dist iid
+# AFL
+python main.py --dataset mnist --federated_type afl --data_dist iid
+```
+
+##### fashionmnist
 
 
 #### From CSV
+##### cidar10
 ```
+# FedAvg
 python main.py --dataset cifar10 --federated_type fedavg --data_dist from_csv --from_csv sample2
+# AFL
+python main.py --dataset cifar10 --federated_type afl --data_dist from_csv --from_csv sample2
 ```
+##### mnist
+```
+# FedAvg
+python main.py --dataset mnist --federated_type fedavg --data_dist from_csv --from_csv sample2
+# AFL
+python main.py --dataset mnist --federated_type afl --data_dist from_csv --from_csv sample2
+```
+##### fashionmnist
