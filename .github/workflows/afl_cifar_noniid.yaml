@@ -1,4 +1,4 @@
-name: AFL cifar10 noniid
+name: AFL cifar10 Non-iid
 on: workflow_dispatch
 
 jobs:
