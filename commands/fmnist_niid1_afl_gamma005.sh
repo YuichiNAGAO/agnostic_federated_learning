@@ -5,4 +5,5 @@ nohup python main.py \
 --dataset fmnist \
 --from_csv niid1 \
 --federated_type afl \
-> ${dir}/fmnist_niid1_afl_`date +%H%M`.log &
+--drfa_gamma 0.05 \
+> ${dir}/fmnist_niid1_afl_gamma005_`date +%H%M`.log &

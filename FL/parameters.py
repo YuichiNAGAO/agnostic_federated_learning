@@ -36,7 +36,7 @@ def get_args():
     parser.add_argument("--seed", default="yes", type=strtobool)
     parser.add_argument("--seed_num", default=0, type=int)
     # For AFL
-    parser.add_argument('--drfa_gamma', default=0.05, type=float)
+    parser.add_argument('--drfa_gamma', default=0.01, type=float)
 
     args = parser.parse_args()
     return args
