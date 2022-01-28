@@ -4,3 +4,5 @@ FL/nodes/__pycache__/*
 models/__pycache__/*
 dataset/*
 !dataset/.gitkeep
+logs/*
+!logs/.gitkeep

@@ -40,8 +40,8 @@ class LocalBase():
         self.client_id = client_id
         self.trainDataset=CreateDataset(train_dataset, args.train_distributed_data[client_id])
         self.testDataset=CreateDataset(test_dataset, args.test_distributed_data[client_id])
-        self.traindataloader=DataLoader(self.trainDataset, args.batch_size, shuffle=True)
-        self.testdataloader=DataLoader(self.testDataset, args.batch_size, shuffle=True)
+        self.trainDataloader=DataLoader(self.trainDataset, args.batch_size, shuffle=True)
+        self.testDataloader=DataLoader(self.testDataset, args.batch_size, shuffle=True)
         self.device = 'cuda' if args.on_cuda else 'cpu'
         self.criterion = nn.CrossEntropyLoss(reduction="mean")
 
@@ -64,7 +64,7 @@ class LocalBase():
         correct = 0
         batch_loss = []
         with torch.no_grad():
-            for images, labels in self.testdataloader:
+            for images, labels in self.testDataloader:
                 images, labels = images.to(self.device), labels.to(self.device)
                 if images.shape[1]==1:
                     images=torch.cat((images, images, images), 1)
@@ -73,7 +73,7 @@ class LocalBase():
                 correct += pred.eq(labels.view_as(pred)).sum().item()
                 loss = self.criterion(output, labels)
                 batch_loss.append(loss.item())
-        test_acc=100. * correct / len(self.testdataloader.dataset)
+        test_acc=100. * correct / len(self.testDataloader.dataset)
         test_loss=sum(batch_loss)/len(batch_loss)
         print('| Client id:{} | Test_Loss: {:.3f} | Test_Acc: {:.3f}'.format(self.client_id,test_loss, test_acc))
             
@@ -93,7 +93,7 @@ class LocalBase():
             batch_loss = []
             correct = 0
 
-            for batch_idx, (images, labels) in enumerate(self.traindataloader):
+            for batch_idx, (images, labels) in enumerate(self.trainDataloader):
                 images, labels = images.to(self.device), labels.to(self.device)
                 if images.shape[1]==1:
                     images=torch.cat((images, images, images), 1)
@@ -112,7 +112,7 @@ class LocalBase():
                 #self.logger.add_scalar('loss', loss.item())、あとでどっかに学習のログ
                 batch_loss.append(loss.item())
 
-            train_acc,train_loss=100. * correct / len(self.traindataloader.dataset),sum(batch_loss)/len(batch_loss)
+            train_acc,train_loss=100. * correct / len(self.trainDataloader.dataset),sum(batch_loss)/len(batch_loss)
             print('| Global Round : {}/{} | Client id:{} | Local Epoch : {}/{} |  Train_Loss: {:.3f} | Train_Acc: {:.3f}'.format(
                         global_epoch,self.args.global_epochs, self.client_id, epoch,self.args.local_epochs,train_loss, train_acc))
         
