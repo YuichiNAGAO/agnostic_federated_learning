@@ -1,2 +1,6 @@
 tqdm
 sklearn
+numpy
+matplotlib
+torch
+torchvision
